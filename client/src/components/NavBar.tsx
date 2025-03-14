@@ -33,34 +33,36 @@ const NavBar: React.FC = () => {
             <h1 className="text-2xl font-bold text-primary">TripGenius</h1>
           </div>
           <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-            <a href="#features" className="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Features</a>
-            <a href="#destinations" className="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Destinations</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">How It Works</a>
-            <a href="#testimonials" className="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Testimonials</a>
+            <a href="#features" className="nav-item text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Features</a>
+            <a href="#destinations" className="nav-item text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Destinations</a>
+            <a href="#how-it-works" className="nav-item text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">How It Works</a>
+            <a href="#testimonials" className="nav-item text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Testimonials</a>
           </div>
           <div className="flex items-center">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="ml-6 flex items-center gap-2">
-                  <User size={16} />
-                  <span>Account</span>
+                <Button 
+                  variant="outline" 
+                  className="account-btn ml-6 rounded-full w-10 h-10 p-0 flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200"
+                >
+                  <User size={20} className="text-primary" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent align="end" className="animate-in slide-in-from-top-5 duration-300">
                 {isLoggedIn ? (
                   <>
-                    <DropdownMenuItem onSelect={() => {}}>
-                      <User className="mr-2 h-4 w-4" />
+                    <DropdownMenuItem onSelect={() => {}} className="cursor-pointer hover:bg-blue-50 transition-colors duration-200">
+                      <User className="mr-2 h-4 w-4 text-primary" />
                       <span>My Profile</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem onSelect={handleLogout}>
-                      <LogOut className="mr-2 h-4 w-4" />
+                    <DropdownMenuItem onSelect={handleLogout} className="cursor-pointer hover:bg-blue-50 transition-colors duration-200">
+                      <LogOut className="mr-2 h-4 w-4 text-primary" />
                       <span>Sign Out</span>
                     </DropdownMenuItem>
                   </>
                 ) : (
-                  <DropdownMenuItem onSelect={handleLogin}>
-                    <LogIn className="mr-2 h-4 w-4" />
+                  <DropdownMenuItem onSelect={handleLogin} className="cursor-pointer hover:bg-blue-50 transition-colors duration-200">
+                    <LogIn className="mr-2 h-4 w-4 text-primary" />
                     <span>Sign In</span>
                   </DropdownMenuItem>
                 )}
