@@ -327,7 +327,7 @@ const Home = () => {
               What our beta testers say
             </p>
             <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-              Join these happy travelers on our waitlist for early access.
+              Join these happy travelers by creating an account for early access.
             </p>
           </div>
 
@@ -367,7 +367,7 @@ const Home = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Everything you need to know about TripGenius before joining our waitlist.
+              Everything you need to know about TripGenius before creating an account.
             </p>
           </div>
 
