@@ -121,13 +121,25 @@ const Home = () => {
           <div className="absolute inset-0 bg-gray-900 bg-opacity-70 mix-blend-multiply" aria-hidden="true"></div>
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 
+            className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
+            data-aos="fade-down" 
+            data-aos-delay="100"
+          >
             Your Dream Trip, <span className="text-gradient bg-gradient-to-r from-amber-400 to-pink-500">AI Planned</span>
           </h1>
-          <p className="mt-6 mx-auto max-w-3xl text-xl text-gray-300">
+          <p 
+            className="mt-6 mx-auto max-w-3xl text-xl text-gray-300"
+            data-aos="fade-up" 
+            data-aos-delay="200"
+          >
             Stop spending hours planning your vacation. Let our AI craft the perfect personalized itinerary in seconds.
           </p>
-          <div className="mt-10 flex justify-center">
+          <div 
+            className="mt-10 flex justify-center"
+            data-aos="fade-up" 
+            data-aos-delay="300"
+          >
             <div className="space-y-4 sm:space-y-0 sm:inline-grid sm:grid-cols-2 sm:gap-5">
               <a href="#trip-planner">
                 <Button className="flex w-full bg-gradient-to-r from-amber-500 to-pink-500 hover:from-amber-600 hover:to-pink-600 shadow-lg transform transition-all duration-300 hover:-translate-y-1">
@@ -148,11 +160,23 @@ const Home = () => {
       <div id="features" className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold text-primary uppercase tracking-wide">Features</h2>
-            <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
+            <h2 
+              className="text-base font-semibold text-primary uppercase tracking-wide"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >Features</h2>
+            <p 
+              className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Why choose TripGenius?
             </p>
-            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+            <p 
+              className="max-w-xl mt-5 mx-auto text-xl text-gray-500"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Our AI-powered platform creates custom itineraries tailored to your preferences.
             </p>
           </div>
