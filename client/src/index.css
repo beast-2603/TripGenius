@@ -10,4 +10,24 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl font-extrabold md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
 }

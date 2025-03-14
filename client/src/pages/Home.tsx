@@ -107,7 +107,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="font-sans text-gray-900 bg-gray-50">
+    <div className="min-h-screen font-sans text-gray-900 bg-gradient-to-b from-white to-blue-50">
       <NavBar />
       
       {/* Hero Section */}
