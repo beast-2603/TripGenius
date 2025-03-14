@@ -1,12 +1,28 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { User, LogIn, LogOut } from "lucide-react";
 
 const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // For demonstration purposes
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
   };
 
   return (
@@ -23,11 +39,33 @@ const NavBar: React.FC = () => {
             <a href="#testimonials" className="text-gray-600 hover:text-primary px-3 py-2 text-sm font-medium">Testimonials</a>
           </div>
           <div className="flex items-center">
-            <a href="#trip-planner">
-              <Button className="ml-6">
-                Join Waitlist
-              </Button>
-            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="ml-6 flex items-center gap-2">
+                  <User size={16} />
+                  <span>Account</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {isLoggedIn ? (
+                  <>
+                    <DropdownMenuItem onSelect={() => {}}>
+                      <User className="mr-2 h-4 w-4" />
+                      <span>My Profile</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onSelect={handleLogout}>
+                      <LogOut className="mr-2 h-4 w-4" />
+                      <span>Sign Out</span>
+                    </DropdownMenuItem>
+                  </>
+                ) : (
+                  <DropdownMenuItem onSelect={handleLogin}>
+                    <LogIn className="mr-2 h-4 w-4" />
+                    <span>Sign In</span>
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <button 
               className="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
               onClick={toggleMenu}
@@ -47,6 +85,28 @@ const NavBar: React.FC = () => {
           <a href="#destinations" className="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Destinations</a>
           <a href="#how-it-works" className="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">How It Works</a>
           <a href="#testimonials" className="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+          {!isLoggedIn ? (
+            <a 
+              href="#" 
+              className="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium"
+              onClick={handleLogin}
+            >
+              Sign In
+            </a>
+          ) : (
+            <>
+              <a href="#" className="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">
+                My Profile
+              </a>
+              <a 
+                href="#" 
+                className="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={handleLogout}
+              >
+                Sign Out
+              </a>
+            </>
+          )}
         </div>
       </div>
     </nav>

@@ -94,7 +94,7 @@ const Home = () => {
     },
     {
       question: "When will TripGenius launch?",
-      answer: "We're currently in final beta testing and expect to launch in the next 2-3 months. Join our waitlist to be among the first to get access!"
+      answer: "We're currently in final beta testing and expect to launch in the next 2-3 months. Create an account today to be among the first to get access!"
     },
     {
       question: "Is TripGenius free to use?",
@@ -228,10 +228,10 @@ const Home = () => {
           <div className="text-center">
             <h2 className="text-base font-semibold text-primary uppercase tracking-wide">AI Trip Planner</h2>
             <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
-              Try our waitlist demo
+              Try our demo
             </p>
             <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-              Experience the power of AI trip planning before we launch. Join our waitlist for early access.
+              Experience the power of AI trip planning before we launch. Create an account for early access.
             </p>
           </div>
 
@@ -400,7 +400,7 @@ const Home = () => {
             data-aos="fade-right"
           >
             <span className="block">Ready to transform how you travel?</span>
-            <span className="block text-amber-400">Join our waitlist today.</span>
+            <span className="block text-amber-400">Create an account today.</span>
           </h2>
           <div 
             className="mt-8 flex lg:mt-0 lg:flex-shrink-0"
