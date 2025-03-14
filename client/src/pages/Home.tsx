@@ -173,7 +173,7 @@ const Home = () => {
       </div>
       
       {/* Destinations Section */}
-      <div id="destinations" className="bg-gray-50 py-16">
+      <div id="destinations" className="bg-gradient-to-b from-blue-50 to-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-base font-semibold text-primary uppercase tracking-wide">Popular Destinations</h2>
@@ -218,7 +218,7 @@ const Home = () => {
       </div>
       
       {/* How It Works Section */}
-      <div id="how-it-works" className="py-16 bg-gray-50">
+      <div id="how-it-works" className="py-16 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-base font-semibold text-primary uppercase tracking-wide">How It Works</h2>
@@ -233,7 +233,7 @@ const Home = () => {
           <div className="mt-12 max-w-lg mx-auto grid gap-10 lg:grid-cols-3 lg:max-w-none">
             <div className="flex flex-col">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white text-2xl font-bold">1</div>
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-2xl font-bold shadow-md">1</div>
               </div>
               <div className="mt-6">
                 <h3 className="text-xl font-medium text-gray-900">Tell us your preferences</h3>
@@ -245,7 +245,7 @@ const Home = () => {
 
             <div className="flex flex-col">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white text-2xl font-bold">2</div>
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-2xl font-bold shadow-md">2</div>
               </div>
               <div className="mt-6">
                 <h3 className="text-xl font-medium text-gray-900">Our AI creates your itinerary</h3>
@@ -257,7 +257,7 @@ const Home = () => {
 
             <div className="flex flex-col">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white text-2xl font-bold">3</div>
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-2xl font-bold shadow-md">3</div>
               </div>
               <div className="mt-6">
                 <h3 className="text-xl font-medium text-gray-900">Save, share, and enjoy!</h3>
@@ -299,7 +299,7 @@ const Home = () => {
       </div>
       
       {/* FAQ Section */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-base font-semibold text-primary uppercase tracking-wide">FAQ</h2>
@@ -329,7 +329,7 @@ const Home = () => {
       </div>
       
       {/* CTA Section */}
-      <div className="bg-primary">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="block">Ready to transform how you travel?</span>
