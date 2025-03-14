@@ -6,7 +6,10 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ avatarUrl, name, text }) => {
   return (
-    <div className="bg-white rounded-xl p-8 shadow-lg card-hover border border-gray-100 relative overflow-hidden">
+    <div 
+      className="bg-white rounded-xl p-8 shadow-lg card-hover border border-gray-100 relative overflow-hidden"
+      data-aos="fade-up"
+    >
       <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-100 to-blue-50 -mr-10 -mt-10 rounded-full z-0 opacity-80"></div>
       
       <div className="relative z-10">

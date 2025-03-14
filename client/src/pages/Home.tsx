@@ -245,17 +245,33 @@ const Home = () => {
       <div id="how-it-works" className="py-16 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold text-primary uppercase tracking-wide">How It Works</h2>
-            <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
+            <h2 
+              className="text-base font-semibold text-primary uppercase tracking-wide"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >How It Works</h2>
+            <p 
+              className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Simple steps to your perfect trip
             </p>
-            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+            <p 
+              className="max-w-xl mt-5 mx-auto text-xl text-gray-500"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Our AI handles the complex planning so you can focus on enjoying your journey.
             </p>
           </div>
 
           <div className="mt-12 max-w-lg mx-auto grid gap-10 lg:grid-cols-3 lg:max-w-none">
-            <div className="flex flex-col">
+            <div 
+              className="flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-2xl font-bold shadow-md">1</div>
               </div>
@@ -267,7 +283,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex flex-col">
+            <div 
+              className="flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-2xl font-bold shadow-md">2</div>
               </div>
@@ -279,7 +299,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex flex-col">
+            <div 
+              className="flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-2xl font-bold shadow-md">3</div>
               </div>
@@ -326,16 +350,32 @@ const Home = () => {
       <div className="py-16 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold text-primary uppercase tracking-wide">FAQ</h2>
-            <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight">
+            <h2 
+              className="text-base font-semibold text-primary uppercase tracking-wide"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >FAQ</h2>
+            <p 
+              className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Frequently asked questions
             </p>
-            <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+            <p 
+              className="max-w-xl mt-5 mx-auto text-xl text-gray-500"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Everything you need to know about TripGenius before joining our waitlist.
             </p>
           </div>
 
-          <div className="mt-12 max-w-3xl mx-auto">
+          <div 
+            className="mt-12 max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
@@ -355,11 +395,17 @@ const Home = () => {
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          <h2 
+            className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            data-aos="fade-right"
+          >
             <span className="block">Ready to transform how you travel?</span>
             <span className="block text-amber-400">Join our waitlist today.</span>
           </h2>
-          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+          <div 
+            className="mt-8 flex lg:mt-0 lg:flex-shrink-0"
+            data-aos="fade-left"
+          >
             <div className="inline-flex rounded-md shadow">
               <a href="#trip-planner">
                 <Button className="bg-white text-primary hover:bg-gray-50">
