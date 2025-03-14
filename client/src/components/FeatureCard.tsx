@@ -8,16 +8,14 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => {
   return (
-    <div className="relative">
-      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
-        <Icon className="h-6 w-6" />
+    <div className="relative p-6 rounded-xl shadow-lg card-hover bg-white border border-gray-100">
+      <div className="mb-5 flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white transform transition-transform duration-300 hover:scale-110">
+        <Icon className="h-7 w-7" />
       </div>
-      <div className="ml-16">
-        <h3 className="text-lg font-medium text-gray-900">{title}</h3>
-        <p className="mt-2 text-base text-gray-500">
-          {description}
-        </p>
-      </div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">
+        {description}
+      </p>
     </div>
   );
 };

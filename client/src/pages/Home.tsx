@@ -122,7 +122,7 @@ const Home = () => {
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Your Dream Trip, <span className="text-amber-500">AI Planned</span>
+            Your Dream Trip, <span className="text-gradient bg-gradient-to-r from-amber-400 to-pink-500">AI Planned</span>
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300">
             Stop spending hours planning your vacation. Let our AI craft the perfect personalized itinerary in seconds.
@@ -130,7 +130,7 @@ const Home = () => {
           <div className="mt-10 max-w-sm sm:flex sm:max-w-none">
             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
               <a href="#trip-planner">
-                <Button className="flex w-full bg-amber-500 hover:bg-amber-600">
+                <Button className="flex w-full bg-gradient-to-r from-amber-500 to-pink-500 hover:from-amber-600 hover:to-pink-600 shadow-lg transform transition-all duration-300 hover:-translate-y-1">
                   Try it free
                 </Button>
               </a>
