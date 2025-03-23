@@ -147,7 +147,7 @@ const Home = () => {
           >
             Your Dream Trip,{' '}
             <span className="text-gradient bg-gradient-to-r from-amber-400 to-pink-500">
-              AI SOHAN
+              AI PERSONALIZED
             </span>
           </h1>
           <p
