@@ -56,15 +56,62 @@
   }
   
   .feature-card:hover .feature-icon {
-    @apply text-primary transform scale-110;
+    @apply transform scale-110;
   }
   
   .feature-icon {
     @apply transition-all duration-300;
   }
   
+  /* Destination card animation effects */
+  .destination-card-cta {
+    @apply opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300;
+  }
+  
+  /* Testimonial card hover effects */
+  .testimonial-card {
+    @apply transition-all duration-300;
+  }
+  
+  .testimonial-card:hover {
+    @apply transform -translate-y-1;
+  }
+  
   /* Circular button with hover effect */
   .account-btn {
     @apply transition-all duration-300 hover:shadow-md hover:ring-2 hover:ring-primary hover:ring-opacity-50;
+  }
+  
+  /* Form field animation */
+  .form-field {
+    @apply transition-all duration-300;
+  }
+  
+  .form-field:focus-within {
+    @apply transform -translate-y-1 shadow-md;
+  }
+  
+  /* Button pulse animation */
+  .btn-pulse {
+    @apply relative overflow-hidden;
+  }
+  
+  .btn-pulse::after {
+    @apply content-[''] absolute inset-0 rounded-md bg-white opacity-0;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
   }
 }
