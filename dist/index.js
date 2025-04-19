@@ -58,7 +58,9 @@ var storage = new MemStorage();
 
 // server/openai.ts
 import OpenAI from "openai";
-var openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "sk-dummy-key-for-testing" });
+var openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY || "sk-dummy-key-for-testing"
+});
 async function generateTripItinerary(tripDetails) {
   const { destination, budget, tripType, days, adults, children } = tripDetails;
   const totalTravelers = adults + children;
@@ -88,6 +90,11 @@ async function generateTripItinerary(tripDetails) {
             { "time": "Morning", "description": "Activity description" },
             { "time": "Afternoon", "description": "Activity description" },
             { "time": "Evening", "description": "Activity description" }
+          ],
+          "food":[
+            {"type": "Breakfast", "description": "Activity description"},
+            {"type": "Lunch", "description": "Activity description"},
+            {"type": "Dinner", "description": "Activity description"},
           ]
         },
         ... (repeat for each day)
@@ -98,7 +105,10 @@ async function generateTripItinerary(tripDetails) {
     const response = await openai.chat.completions.create({
       model: "gpt-4o",
       messages: [
-        { role: "system", content: "You are an expert travel planner that creates detailed, realistic itineraries." },
+        {
+          role: "system",
+          content: "You are an expert travel planner that creates detailed, realistic itineraries and suggests local delicacies."
+        },
         { role: "user", content: prompt }
       ],
       response_format: { type: "json_object" }
@@ -118,6 +128,11 @@ async function generateTripItinerary(tripDetails) {
           { time: "Morning", description: "Explore local attractions" },
           { time: "Afternoon", description: "Visit popular landmarks" },
           { time: "Evening", description: "Enjoy local cuisine" }
+        ],
+        food: [
+          { type: "Breakfast", description: "Activity description" },
+          { type: "Lunch", description: "Activity description" },
+          { type: "Dinner", description: "Activity description" }
         ]
       }))
     };
